@@ -8,7 +8,10 @@ export interface BookType {
     description: string;
     format: string;
     likes: number;
-    review: number;
+    review: {
+        review: string;
+        "review_author": string;
+    }[];
 }
 
 export interface ResponseType {

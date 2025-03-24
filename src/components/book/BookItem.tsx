@@ -49,8 +49,16 @@ const BookItem = ({
                         <Like/> {likes}
                     </span>
                     <span className="badge bg-light text-dark d-flex align-items-center gap-2">
-                        <Review/> {review}
+                        <Review/> {review.length}
                     </span>
+                </div>
+                <div className="d-flex flex-column mt-2">
+                    {review.map(({ review, review_author }) => (
+                        <div className="alert alert-light">
+                            <div>{review}</div>
+                            <div className="text-end fst-italic text-dark">- {review_author}</div>
+                        </div>
+                    ))}
                 </div>
             </Collapse>
         </div>
