@@ -9,7 +9,7 @@ import BookFooter from "./BookFooter.tsx";
 import ToolBar from "../toolbar/ToolBar.tsx";
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/books';
+const URL = 'https://task-5-backend-a75a.onrender.com/books';
 
 const Books = () => {
     const [books, setBooks] = useState<BookType[]>([]);
